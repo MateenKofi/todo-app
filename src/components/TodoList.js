@@ -6,7 +6,7 @@ const TodoList = ({todos, deleteTodo}) => {
   if(!todos.length) {
     return(
       <Badge colorScheme='cyan' p='4' borderRadius='lg'>
-        No Todos, yay!!!
+        No Todos List
       </Badge>
     );
   }

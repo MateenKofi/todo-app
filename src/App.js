@@ -1,5 +1,4 @@
-import { VStack, IconButton, Box, Heading, useColorMode } from '@chakra-ui/react';
-import { FaSun, FaMoon } from "react-icons/fa";
+import { VStack,  Box, Heading } from '@chakra-ui/react';
 import TodoList from './components/TodoList';
 import AddTodo from './components/AddTodo';
 import { useState, useEffect } from 'react';
@@ -23,13 +22,13 @@ function App() {
     setTodos([...todos, todo]);
   }
 
-  const {colorMode, toggleColorMode} = useColorMode();
+ 
   
   return (
-    <VStack p='4'>
-      <IconButton icon={colorMode === 'light' ? <FaSun /> : <FaMoon />} isRound='true' size='lg' alignSelf='flex-end' onClick={toggleColorMode} />
+    <VStack p='20'>
+     
       <Box>
-        <Heading mb='8' fontWeight='extrabold' size='2xl' bgGradient='linear(to-r, cyan.400, purple.400, pink.400)' bgClip='text'>Todo Application</Heading>
+        <Heading mb='8' fontWeight='extrabold' size='2xl' bgGradient='linear(to-r, cyan.400, purple.400, pink.400)' bgClip='text'>ListEase T0-DO PROx</Heading>
       </Box>
       <TodoList todos={todos} deleteTodo={deleteTodo} />
       <AddTodo addTodo={addTodo} />
